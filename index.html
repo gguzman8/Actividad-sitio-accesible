@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talleres Creativos</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f4f4f4; color: #333; }
+    header { background: #394867; color: white; text-align: center; padding: 30px 15px; }
+    header h1 { margin: 0 0 8px; }
+    nav { background: #212a3e; padding: 14px; text-align: center; }
+    nav a { color: white; text-decoration: none; margin: 0 18px; }
+    main { max-width: 980px; margin: 25px auto; padding: 0 18px; }
+    section { background: white; border-radius: 8px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px #0001; }
+    h2 { color: #394867; margin-top: 0; }
+    .images { display: flex; gap: 18px; flex-wrap: wrap; margin: 18px 0; }
+    .images img { width: calc(50% - 9px); min-width: 240px; height: 200px; object-fit: cover; border-radius: 6px; flex: 1; }
+    table { width: 100%; border-collapse: collapse; margin: 18px 0; }
+    th, td { border: 1px solid #aaa; padding: 12px; text-align: left; }
+    th { background: #dce4f2; }
+    form { max-width: 470px; }
+    input, select, textarea { display: block; width: 100%; padding: 11px; margin: 12px 0; border: 1px solid #aaa; border-radius: 4px; font: inherit; }
+    button { background: #394867; color: white; padding: 12px 24px; border: 0; border-radius: 4px; cursor: pointer; }
+    footer { text-align: center; padding: 24px; background: #212a3e; color: white; }
+    footer a { color: white; }
+    @media (max-width: 540px) { .images img { min-width: 100%; } nav a { margin: 0 7px; } table { font-size: 13px; } th, td { padding: 7px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Talleres Creativos</h1>
+    <p>Aprende algo nuevo, conoce personas y desarrolla tus habilidades.</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#talleres">Talleres</a>
+    <a href="#inscripcion">Inscripción</a>
+  </nav>
+
+  <main id="inicio">
+    <!-- Caso de uso 1: consultar la oferta y los horarios de talleres -->
+    <section id="talleres">
+      <h2>Caso de uso 1: Consultar talleres disponibles</h2>
+      <p>Explora nuestros talleres y revisa los horarios antes de elegir el que más te interese.</p>
+      <div class="images">
+        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="">
+      </div>
+      
+      <table>
+        <caption>Horarios y costos de los talleres disponibles</caption>
+        <thead>
+          <tr>
+            <th scope="col">Taller</th>
+            <th scope="col">Día</th>
+            <th scope="col">Horario</th>
+            <th scope="col">Costo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Pintura</th>
+            <td>Lunes</td>
+            <td>16:00 - 18:00</td>
+            <td>$250 MXN</td>
+          </tr>
+          <tr>
+            <th scope="row">Fotografía</th>
+            <td>Miércoles</td>
+            <td>17:00 - 19:00</td>
+            <td>$300 MXN</td>
+          </tr>
+          <tr>
+            <th scope="row">Escritura creativa</th>
+            <td>Viernes</td>
+            <td>16:00 - 18:00</td>
+            <td>$200 MXN</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Si quieres conocer más sobre técnicas artísticas, visita <a href="https://es.wikipedia.org/wiki/Arte">este artículo sobre arte</a>.</p>
+    </section>
+
+    <!-- Caso de uso 2: llenar un formulario de interés -->
+    <section id="inscripcion">
+      <h2>Caso de uso 2: Solicitar inscripción</h2>
+      <p>Completa el formulario para registrar tu interés en uno de nuestros talleres.</p>
+      <form onsubmit="alert('Solicitud de demostración enviada. No se guardaron datos.'); return false;">
+        <label for="name">Nombre Completo:</label>
+        <input id="name" type="text" placeholder="Juan Perez">
+        <label for="email">Correo electrónico:</label> 
+        <input type="email" id="email" placeholder="correo@ejemplo.com">
+        <label for="taller">Talleres:</label>
+        <select id="taller">
+          <option value="">Selecciona un taller</option>
+          <option>Pintura</option>
+          <option>Fotografía</option>
+          <option>Escritura creativa</option>
+        </select>
+        <label for="comments">Deja un comentario</label>
+        <textarea rows="4" id="comments" placeholder="Comentarios (opcional)"></textarea>
+        <button type="submit">Enviar solicitud</button>
+      </form>
+      <p>¿Tienes dudas? <a href="mailto:talleres@example.com">Escríbenos por correo</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Talleres Creativos · Página de práctica</p>
+    <a href="#inicio">Volver al inicio</a>
+  </footer>
+</body>
+</html>
